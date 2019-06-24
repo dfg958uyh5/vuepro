@@ -14,21 +14,29 @@
           <el-main>Main</el-main>
         </el-container>
 
-        <el-aside>Aside</el-aside>
+        <asiderd>
+          <el-aside></el-aside>
+        </asiderd>
       </el-container>
 
-      <el-footer>Footer</el-footer>
+      <el-footer>
+        <footers></footers>
+      </el-footer>
     </el-container>
   </div>
 </template>
 <script>
 import headers from "./headers/index"; //引入组件路径
 import asides from "./asides/index"; //引入组件路径
+import asiderd from "./asiderd/index"; //引入组件路径
+import footers from "./footers/index"; //引入组件路径
 export default {
   components: {
     //注册组件
     headers,
-    asides
+    asides,
+    asiderd,
+    footers,
   },
   methods: {}
 };
