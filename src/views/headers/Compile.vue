@@ -43,6 +43,7 @@
           </el-form-item>
         </el-col>
       </el-row>
+      
       <el-row>
         <P>I支路</P>
         <el-col :span="6">
@@ -89,7 +90,7 @@
         </el-col>
 
         <el-col :span="18">
-          <!-- 通信信息类别  -->
+          <!-- 通信信息类别  -->                 
           <p>通信信息类别</p>
           <el-row>
             <el-col :span="7">
@@ -162,8 +163,11 @@
               <el-input type="textarea" v-model="ruleForm.desc"></el-input>
             </el-form-item>
           </el-row>-->
+          
         </el-col>
+
       </el-row>
+
     </el-form>
   </div>
 </template> 

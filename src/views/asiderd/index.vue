@@ -21,7 +21,7 @@
       </el-form-item>
     </el-form>
     <!--  -->
-    <el-tabs v-model="activeName2" type="card" @tab-click="handleClick">
+    <el-tabs v-model="activeName2" type="card">
       <el-tab-pane label="通道一" name="aisle1">
         <aisle1></aisle1>
         <!-- 组件 -->

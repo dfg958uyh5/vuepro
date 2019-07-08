@@ -8,7 +8,7 @@
       class="demo-ruleForm"
     >
       <el-row>
-        <el-col :span="6" >
+        <el-col :span="6">
           <el-form-item label="通道号选择" prop="name">
             <el-input-number
               v-model="num8"
@@ -19,12 +19,12 @@
             ></el-input-number>
           </el-form-item>
         </el-col>
-        <el-col :span="6" >
+        <el-col :span="6">
           <el-form-item>
             <el-button type="primary" @click="onSubmit">仿真起始时间</el-button>
           </el-form-item>
         </el-col>
-        <el-col :span="6" >
+        <el-col :span="6">
           <el-form-item>
             <el-button type="primary" @click="onSubmit">广播信息设置</el-button>
           </el-form-item>
@@ -32,12 +32,12 @@
       </el-row>
 
       <el-row>
-        <el-col :span="6" >
+        <el-col :span="6">
           <el-form-item label="分帧号选择" prop="name">
             <el-input-number v-model="num1" @change="handleChange" :min="1" :max="10" label="描述文字"></el-input-number>
           </el-form-item>
         </el-col>
-        <el-col :span="6" >
+        <el-col :span="6">
           <el-form-item>
             <el-button type="primary" @click="onSubmit">帧度模块设置</el-button>
           </el-form-item>
@@ -58,96 +58,150 @@
             </el-select>
           </el-form-item>
         </el-col>
-        <el-col :span="6" >
+        <el-col :span="6">
           <el-form-item label="I支路" prop="name">
             <el-input v-model="ruleForm.name"></el-input>
           </el-form-item>
         </el-col>
       </el-row>
-
-      <el-row>
-        <el-form-item label prop="resource">
-          <el-radio-group v-model="ruleForm.resource">
-            <el-row>
-              <el-radio label="定位信息"></el-radio>
-            </el-row>
-            <el-row>
-              <el-radio label="通信信息"></el-radio>
-            </el-row>
-            <el-row>
-              <el-radio label="通信回执"></el-radio>
-            </el-row>
-            <el-row>
-              <el-radio label="其他信息"></el-radio>
-            </el-row>
-            <el-row>
-              <el-radio label="空帧"></el-radio>
-            </el-row>
-          </el-radio-group>
-        </el-form-item>
-      </el-row>
-
-      <el-row>
-        <el-col :span="7">
-          <el-form-item label="通信形式" prop="region">
-            <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
-              <el-option label="区域一" value="shanghai"></el-option>
-              <el-option label="区域二" value="beijing"></el-option>
-            </el-select>
-          </el-form-item>
-        </el-col>
-        <el-col :span="6" >
-          <el-form-item label="收信方地址" prop="name">
-            <el-input v-model="ruleForm.name"></el-input>
-          </el-form-item>
-        </el-col>
-      </el-row>
-      <el-row>
-        <el-form-item label="回执数" prop="region">
-          <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
-            <el-option label="区域一" value="shanghai"></el-option>
-            <el-option label="区域二" value="beijing"></el-option>
-          </el-select>
-        </el-form-item>
-      </el-row>
-     <!-- 空白框 -->
-      <el-form-item prop="desc">
-        <el-input type="textarea" v-model="ruleForm.desc"></el-input>
-      </el-form-item>
-      <!-- 四个input框 -->
-      <el-row>
-        <el-col :span="6" >
-          <el-form-item label="发出时间" prop="name">
-            <el-input v-model="ruleForm.name"></el-input>
-          </el-form-item>
-        </el-col>
-        <el-col :span="6" >
-          <el-form-item label="h" prop="name">
-            <el-input v-model="ruleForm.name"></el-input>
-          </el-form-item>
-        </el-col>
-      </el-row>
-      <el-row>
-        <el-col :span="6" >
-          <el-form-item label="回执时间" prop="name">
-            <el-input v-model="ruleForm.name"></el-input>
-          </el-form-item>
-        </el-col>
+      <!--  -->
+      <!-- <el-row>
         <el-col :span="6">
-          <el-form-item label="h" prop="name">
-            <el-input v-model="ruleForm.name"></el-input>
+          <el-form-item label prop="resource">
+            <el-radio-group v-model="ruleForm.resource">
+              <el-row>
+                <el-radio label="定位信息"></el-radio>
+              </el-row>
+              <el-row>
+                <el-radio label="通信信息"></el-radio>
+              </el-row>
+              <el-row>
+                <el-radio label="通信回执"></el-radio>
+              </el-row>
+              <el-row>
+                <el-radio label="其他信息"></el-radio>
+              </el-row>
+              <el-row>
+                <el-radio label="空帧"></el-radio>
+              </el-row>
+            </el-radio-group>
           </el-form-item>
-        </el-col>
-      </el-row>
+      </el-col>-->
+      <!--  -->
+      <!-- <el-col :span="18"> -->
+      <!--lalalala  -->
+      <!-- <el-row>
+            <el-col :span="7">
+              <el-form-item label="通信形式" prop="region">
+                <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
+                  <el-option label="区域一" value="shanghai"></el-option>
+                  <el-option label="区域二" value="beijing"></el-option>
+                </el-select>
+              </el-form-item>
+            </el-col>
+            <el-col :span="6">
+              <el-form-item label="收信方地址" prop="name">
+                <el-input v-model="ruleForm.name"></el-input>
+              </el-form-item>
+            </el-col>
+          </el-row>
+          <el-row>
+            <el-form-item label="回执数" prop="region">
+              <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
+                <el-option label="区域一" value="shanghai"></el-option>
+                <el-option label="区域二" value="beijing"></el-option>
+              </el-select>
+            </el-form-item>
+      </el-row>-->
+      <!-- 空白框 -->
+      <!-- <el-form-item prop="desc">
+            <el-input type="textarea" v-model="ruleForm.desc"></el-input>
+      </el-form-item>-->
+      <!-- 四个input框 -->
+      <!-- <el-row>
+            <el-col :span="6">
+              <el-form-item label="发出时间" prop="name">
+                <el-input v-model="ruleForm.name"></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="6">
+              <el-form-item label="h" prop="name">
+                <el-input v-model="ruleForm.name"></el-input>
+              </el-form-item>
+            </el-col>
+          </el-row>
+          <el-row>
+            <el-col :span="6">
+              <el-form-item label="回执时间" prop="name">
+                <el-input v-model="ruleForm.name"></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="6">
+              <el-form-item label="h" prop="name">
+                <el-input v-model="ruleForm.name"></el-input>
+              </el-form-item>
+            </el-col>
+      </el-row>-->
+      <!-- lalalala -->
+      <!-- </el-col>
+      </el-row>-->
+      <!--   -->
+
+      <el-tabs type="border-card" tab-position="left">
+        <el-tab-pane>
+          <span slot="label">
+            <el-radio v-model="radio" label="1">定位信息</el-radio>
+          </span>
+          <test1></test1>
+        </el-tab-pane>
+        <el-tab-pane>
+          <span slot="label">
+            <el-radio v-model="radio" label="2">通信信息</el-radio>
+          </span>
+          <test2></test2>
+        </el-tab-pane>
+        <el-tab-pane>
+          <span slot="label">
+            <el-radio v-model="radio" label="3">通信回执</el-radio>
+          </span>
+          <test3></test3>
+        </el-tab-pane>
+        <el-tab-pane>
+          <span slot="label">
+            <el-radio v-model="radio" label="4">其他信息</el-radio>
+          </span>
+          定时任务补偿
+        </el-tab-pane>
+        <el-tab-pane>
+          <span slot="label">
+            <el-radio v-model="radio" label="5">空帧</el-radio>
+          </span>
+          定时任务补偿
+        </el-tab-pane>
+      </el-tabs>
     </el-form>
   </div>
 </template>
 
+
+
+
+
+
+
 <script>
+import test3 from "./test3";
+import test2 from "./test2";
+import test1 from "./test1";
 export default {
-  components: {},
+  components: {
+    test3,
+    test2,
+    test1
+  },
   data() {
     return {
+      radio: "1", //tab切换
       num8: 1,
       num1: 1,
       ruleForm: {
@@ -220,8 +274,8 @@ export default {
     dataList() {
       this.axios
         .post(
-          "/api/test",
-          { name: "xiaoming", sex: "nan" },
+          "/api/v1/device/{deviceId}/SwitchButton",
+          { name: "Switch" },
           {
             headers: {
               "Content-Type": "application/x-www-form-urlencoded"
@@ -230,12 +284,12 @@ export default {
         )
         .then(function(res) {
           this.ruleForm = res.data.data;
-             console.log(res.data);
+          console.log(res.data);
           //控制台打印请求成功时返回的数据
-        })     
+        })
         .catch(function(err) {
           if (err.response) {
-             console.log(err.response);
+            console.log(err.response);
             //控制台打印错误返回的内容
           }
         });
@@ -244,4 +298,18 @@ export default {
   }
 };
 </script>
+
+
+
+
+
+
+
+<style>
+.tab-tilte li {
+  font-size: 12px;
+}
+</style>
+
+
 

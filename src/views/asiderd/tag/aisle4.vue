@@ -47,45 +47,49 @@
       </el-form-item>
       <!--  -->
       <P>伪距变化模型</P>
-      <el-form-item prop="name">
-        <el-col :span="8">
-          <el-radio-group v-model="ruleForm.resource">
-            <el-radio label="直线运动"></el-radio>
-          </el-radio-group>
-        </el-col>
-        <el-col :span="8">
-          <el-radio-group v-model="ruleForm.resource">
-            <el-radio label="正炫运动"></el-radio>
-          </el-radio-group>
-        </el-col>
-        <el-col :span="4">
-          <el-button type="primary" size="mini">ALL</el-button>
-        </el-col>
-      </el-form-item>
-      <!--  -->
-      <p>模型参数</p>
-      <el-form-item label="活动名称" prop="name">
-        <el-input v-model="ruleForm.name" size="mini"></el-input>
-      </el-form-item>
-      <el-form-item label="活动名称" prop="name">
-        <el-input v-model="ruleForm.name" size="mini"></el-input>
-      </el-form-item>
-      <el-form-item label="活动名称" prop="name">
-        <el-input v-model="ruleForm.name" size="mini"></el-input>
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click="onSubmit" size="mini">提交</el-button>
-      </el-form-item>
+      <div class="add">
+        <ul class="tab-tilte">
+          <li @click="cur=0" :class="{active:cur==0}">
+             <input type="radio" :checked="0"></input>直线运动</li>
+          <li @click="cur=1" :class="{active:cur==1}">
+             <input type="radio" :checked="1" ></input>正弦运动</li>
+              <el-button type="primary" class="ver" size="mini">ALL</el-button>
+        </ul>
+
+        <div class="tab-content">
+          <div v-show="cur==0">
+            <test1></test1>
+          </div>
+
+          <div v-show="cur==1">
+            <test2></test2>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+
     </el-form>
   </div>
 </template>
 
 
 <script>
+import test1 from "./test1";
+import test2 from "./test2";
 export default {
-  components: {},
+  components: {
+    test1,
+     test2
+  },
   data() {
     return {
+       cur: 0, //默认选中第一个tab
       num8: 1,
       num1: 1,
       ruleForm: {
@@ -188,5 +192,49 @@ export default {
 <style>
 .el-form-item {
   margin-bottom: 2px;
+}
+
+.ver{
+  margin-left:30px;
+}
+
+.tab-tilte li{
+  font-size: 12px;
+}
+</style>
+
+<style scoped>
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.add {
+  width: 350px;
+  height: 250px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+.tab-tilte {
+  width: 90%;
+}
+.tab-tilte li {
+  float: left;
+  width: 25%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+/* 点击对应的标题添加对应的背景颜色 */
+.tab-tilte .active {
+  background-color: #09f;
+  color: #fff;
+}
+.tab-content div {
+  float: left;
+  width: 90%;
+  line-height: 20px;
+  text-align: center;
 }
 </style>

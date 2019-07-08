@@ -11,7 +11,9 @@
         </asides>
 
         <el-container>
-          <el-main>Main</el-main>
+          <mains>
+            <el-main>main</el-main>
+          </mains>
         </el-container>
 
         <asiderd>
@@ -30,6 +32,7 @@ import headers from "./headers/index"; //引入组件路径
 import asides from "./asides/index"; //引入组件路径
 import asiderd from "./asiderd/index"; //引入组件路径
 import footers from "./footers/index"; //引入组件路径
+import mains from "./mains/index"; //引入组件路径
 export default {
   components: {
     //注册组件
@@ -37,6 +40,7 @@ export default {
     asides,
     asiderd,
     footers,
+    mains
   },
   methods: {}
 };
